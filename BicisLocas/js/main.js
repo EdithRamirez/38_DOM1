@@ -5,8 +5,8 @@ function validateForm(){
 		alert("Tiene que escribir su nombre");
 		return false;
 	}
-	if(!/^[a-zA-Z]*$/g.test(document.getElementById("name").value)){
-		alert("Caracter inválido");
+	else if(!/^[A-Z][a-z]*$/g.test(document.getElementById("name").value)){
+		alert("La primera letra debe ser mayúscula");
 		return false;
 	}
 
@@ -15,6 +15,11 @@ function validateForm(){
 		alert("Tiene que escribir su apellido");
 		return false;
 	}
+	else if(!/^[A-Z][a-z]*$/g.test(document.getElementById("name").value)){
+		alert("La primera letra debe ser mayúscula");
+		return false;
+	}
+
 	var correo = document.getElementById("input-email").value;
 	if (correo == null || correo == "") {
 		alert("Tiene que escribir su correo");
@@ -37,7 +42,7 @@ function validateForm(){
 		return false;
 	}
 
-	var tipoBici = document.getElementById("lista").selectedIndex;
+	var tipoBici = document.getElementsByTagName("select")[0].selectedIndex;
 	if( tipoBici == null || tipoBici == 0 ) {
 		alert("Debe seleccionar una opción de la lista");
 		return false;
