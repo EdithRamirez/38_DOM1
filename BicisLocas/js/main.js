@@ -5,7 +5,7 @@ function validateForm(){
 		alert("Tiene que escribir su nombre");
 		return false;
 	}
-	else if(!/^[A-Z][a-z]*$/g.test(document.getElementById("name").value)){
+	else if(!/^[A-Z][a-z]*$/g.test(nombre)){
 		alert("La primera letra debe ser mayúscula");
 		return false;
 	}
@@ -15,7 +15,7 @@ function validateForm(){
 		alert("Tiene que escribir su apellido");
 		return false;
 	}
-	else if(!/^[A-Z][a-z]*$/g.test(document.getElementById("name").value)){
+	else if(!/^[A-Z][a-z]*$/g.test(apellido)){
 		alert("La primera letra debe ser mayúscula");
 		return false;
 	}
@@ -29,7 +29,6 @@ function validateForm(){
 		alert("Escribe un correo válido");
 		return false;
 	}
-
 	var contrasena = document.getElementById("input-password").value;
 	if (contrasena == null || contrasena == "") {
 		alert("Tiene que escribir su contraseña");
